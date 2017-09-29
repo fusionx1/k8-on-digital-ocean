@@ -1,0 +1,25 @@
+
+kubectl get nodes
+kubectl get sv
+
+kubectl --kubeconfig ./admin.conf get services wordpress
+copy admin.conf from master to local and put it on .kube
+
+kubectl get pods
+kubect create -f file.yml
+
+watch kubectl get nodes
+
+kubectl get cs
+
+Deployment on wordpress
+kubectl create -f local-volumes.yaml
+kubectl get pv
+kubectl create secret generic mysql-pass --from-literal=password=pass1234
+kubectl create -f mysql-deployment.yaml  //using p1v1
+kubectl create -f wordpress-deployment.yaml
+kubectl get services wordpress
+
+
+kubectl proxy
+configure LB
